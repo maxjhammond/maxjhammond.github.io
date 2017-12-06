@@ -29,12 +29,18 @@ body{
     font-size: 0.8em;
 }
 
+p, span, a{
+    font-family: 'HelveticaNeueMed', sans-serif;
+    font-size: 1em;
+}
+
 img{
     width: 100%;
 }
 a{
     color: unset;
     text-decoration: none;
+    cursor: pointer;
     &:visited{
         color: unset;
     }
@@ -57,9 +63,58 @@ footer{
     .fsection{
         width: 50%;
         display: inline-block;
-        h3{
-            border-bottom: 1px solid;
-            display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        &.contact, &.social{
+            .icon-wrap {
+                .icons {
+                    display: inline-block;
+                    width: 50%;
+                    margin: 0 auto;
+                    a {
+                        width: 50%;
+                        display: inline-block;
+                        i {
+                            font-size: 3em;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        &.social{
+            border-right: 1px solid;
+        }
+    }
+    @media (max-width: 640px){
+        background: @grey;
+        background: linear-gradient(to bottom, darken(@lightgrey, 10%) 0%, @lightgrey 30%, @lightgrey 100%);
+        margin-bottom: 0;
+        .container{
+            border-top: 0;
+            .fsection{
+                width: 100%;
+                display: block;
+                border-right: 0;
+                h3, .icon-wrap{
+                    width: 50%;
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: left;
+                    .icons{
+                        width: 100%;
+                        text-align: right;
+                        a{
+                            i{
+                                font-size: 2em;
+                            }
+                        }
+                    }
+                }
+                &.contact{
+                    border-top: 1px solid;
+                }
+            }
         }
     }
 }
