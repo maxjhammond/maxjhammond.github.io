@@ -104,9 +104,9 @@ header{
                 }
             }
             .project{
-                height: 0px;
+                max-height: 0;
                 overflow: hidden;
-                transition: height ease 0.4s;
+                transition: max-height ease 0.4s;
             }
             &:hover {
                 a {
@@ -119,7 +119,8 @@ header{
                     }
                 }
                 .project{
-                    height: 200px;
+                    max-height: 1000px;
+                    transition: max-height ease 0.8s;
                 }
             }
         }
