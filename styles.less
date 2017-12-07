@@ -74,9 +74,35 @@ footer{
                     a {
                         width: 50%;
                         display: inline-block;
+                        position: relative;
                         i {
                             font-size: 3em;
                             cursor: pointer;
+                            margin-left: 0;
+                            transition: all ease 0.2s;
+                            .icon-inner{
+                                font-size: 16px;
+                                position: absolute;
+                                opacity: 0;
+                                left: 0;
+                                top: 33%;
+                                transition: all ease 0.2s;
+                            }
+                        }
+                        &:hover{
+                            i{
+                                margin-left: -50%;
+                                .icon-inner{
+                                    opacity: 1;
+                                    left: 40%;
+                                }
+                                &.fa.fa-envelope-o{
+                                    margin-left: -140%;
+                                    .icon-inner{
+                                        left: 0%;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -177,14 +203,7 @@ footer{
                     right: -20px;
                     transition: all ease 0.2s;
                 }
-            }
-            .project{
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height ease 0.4s;
-            }
-            &:hover {
-                a {
+                &:hover {
                     margin-right: 0;
                     &::after {
                         width: 100%;
@@ -192,15 +211,33 @@ footer{
                         bottom: -2px;
                         right: 0;
                     }
+                    & + .project{
+                        max-height: 1000px;
+                        transition: max-height ease 0.8s;
+                        margin: 10px 0 20px;
+                        p{
+                            margin-bottom: 5px;
+                        }
+                    }
                 }
-                .project{
+            }
+            .project{
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height ease 0.4s;
+                &:hover{
                     max-height: 1000px;
                     transition: max-height ease 0.8s;
+                    padding: 10px 0 20px;
+                    p{
+                        margin-bottom: 5px;
+                    }
                 }
             }
         }
     }
     .section{
+        margin: 10% 0;
         h2{
             margin: 0;
             text-align: center;
@@ -224,6 +261,7 @@ footer{
 //FULL VH ON MOBILE SECTIONS
 @media (max-width: 640px) {
     .section{
+        margin: 0;
         height: 100vh;
         line-height: 100vw;
         .section-inner{
