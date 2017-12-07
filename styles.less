@@ -89,13 +89,16 @@ footer{
                             cursor: pointer;
                             margin-left: 0;
                             transition: all ease 0.2s;
-                            .icon-inner{
+                            .icon-inner {
                                 font-size: 16px;
                                 position: absolute;
                                 opacity: 0;
                                 left: 0;
                                 top: 33%;
                                 transition: left ease 0.2s;
+                                @media (max-width: 640px) {
+                                    display: none;
+                                }
                             }
                         }
                         &:hover{
