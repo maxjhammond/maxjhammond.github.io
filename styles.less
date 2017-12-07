@@ -52,6 +52,15 @@ header{
     text-align: center;
     padding: 20px 0;
     font-family: 'HelveticaNeueLTDExt', sans-serif;
+    h1,img{
+        display: inline-block;
+        vertical-align: bottom;
+        color: @red;
+    }
+    img.logo{
+        height: 40px;
+        width: auto;
+    }
 }
 
 footer{
@@ -86,11 +95,12 @@ footer{
                                 opacity: 0;
                                 left: 0;
                                 top: 33%;
-                                transition: all ease 0.2s;
+                                transition: left ease 0.2s;
                             }
                         }
                         &:hover{
                             i{
+                                color: @red;
                                 margin-left: -50%;
                                 .icon-inner{
                                     opacity: 1;
@@ -189,10 +199,11 @@ footer{
         li{
             a {
                 position: relative;
-                margin: 0 20px 5px 0;
+                margin: 0 20px 0px 0;
                 transition: all ease 0.4s;
                 cursor: pointer;
                 display: inline-block;
+                padding-bottom: 5px;
                 &::after {
                     position: absolute;
                     content: '';
@@ -205,11 +216,13 @@ footer{
                 }
                 &:hover {
                     margin-right: 0;
+                    color: @red;
                     &::after {
                         width: 100%;
                         top: unset;
                         bottom: -2px;
                         right: 0;
+                        background: @red;
                     }
                     & + .project{
                         max-height: 1000px;
@@ -229,6 +242,7 @@ footer{
                     max-height: 1000px;
                     transition: max-height ease 0.8s;
                     padding: 10px 0 20px;
+                    margin: 0;
                     p{
                         margin-bottom: 5px;
                     }
