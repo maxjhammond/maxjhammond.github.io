@@ -9,12 +9,18 @@
     <link rel="stylesheet/less" href="styles.less">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
     <script src="https://use.fontawesome.com/0540ebefd3.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
-      <h1>Web Design</h1>
-      <img class="logo" src="logo-small-red.png">
-      <h1>by Max</h1>
+      <div class="container">
+        <h1>Web Design</h1>
+        <img class="logo" src="logo-small-red.png">
+        <h1>by Max</h1>
+      </div>
     </header>
     <div class="container">
       <div class="hero">
@@ -42,6 +48,10 @@
           <p class="center"><i>HTML5, CSS3 and JavaScript</i></p>
           <p>With the above I can create just about anything on a web page. For more dynamic content, we can introduce libraries like jQuery and Angular. For projects like blogs and online stores, we can introduce back-ends such as Wordpress, Magento and Shopify.</p>
         </div>
+      </div>
+      <h2>Inspiration</h2>
+      <div class="section inspiration">
+        
       </div>
       <h2 class="projects">
         Projects
@@ -128,5 +138,22 @@
       </div>
     </div>
   </footer>
+  <script>
+    var selector = '.projects li a';
+
+    $(selector).on('click', function(){
+
+        if($(this).attr('class') == 'active'){
+            $(this).next().removeClass('active');
+            $(this).removeClass('active');
+        }else{
+            $(selector).next().removeClass('active');
+            $(selector).removeClass('active');
+            $(this).next().addClass('active');
+            $(this).addClass('active');
+        }
+
+    });
+  </script>
   </body>
 </html>
