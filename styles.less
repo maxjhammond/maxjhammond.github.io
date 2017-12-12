@@ -263,11 +263,14 @@ footer{
       .project{
         max-height: 0;
         overflow: hidden;
-        padding: 0;
-        transition: all cubic-bezier(0,1,0,1) 0.8s;
+        opacity: 0;
+        padding: 0 0 0;
+        transition: opacity linear 0.4s;
         &.active{
           max-height: 1000px;
           padding: 10px 0 20px;
+          opacity: 1;
+          transition: opacity linear 0.4s;
         }
         p{
           margin-bottom: 5px;
