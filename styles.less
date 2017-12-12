@@ -90,7 +90,7 @@ header{
 
 footer{
   padding: 20px 0 0;
-  margin: 20px 0 0;
+  margin: 100px 0 0;
   .container{
     border-top: 1px solid;
   }
@@ -151,9 +151,8 @@ footer{
     }
   }
   @media (max-width: 640px){
-    background: @grey;
-    background: linear-gradient(to bottom, darken(@lightgrey, 10%) 0%, @lightgrey 30%, @lightgrey 100%);
-    margin-bottom: 0;
+    margin: 100px 0 0;
+    background: @red;
     .container{
       border-top: 0;
       .fsection{
@@ -183,7 +182,7 @@ footer{
   }
   .logo-wrap{
     text-align: center;
-    margin: 10px 0;
+    padding: 10px 0;
   }
 }
 
@@ -231,11 +230,10 @@ footer{
     li{
       a {
         position: relative;
-        margin: 0 20px 0px 0;
+        padding: 0 20px 5px;
         transition: all linear 0.2s;
         cursor: pointer;
         display: inline-block;
-        padding-bottom: 5px;
         &::after {
           position: absolute;
           content: '';
@@ -243,11 +241,11 @@ footer{
           height: 2px;
           background: @black;
           top: 35%;
-          right: -18px;
+          right: 0;
           transition: all ease 0.2s;
         }
         &:hover, &.active {
-          margin-right: 0;
+          padding: 0 0 5px;
           color: @red;
           &::after {
             width: 100%;
@@ -294,6 +292,20 @@ footer{
         margin-bottom: 2px;
       }
     }
+    &.inspiration{
+      line-height: normal;
+      .insp-gallery {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        img {
+          width: 33%;
+          display: inline-block;
+          padding: 0 0 5px;
+          box-sizing: border-box;
+        }
+      }
+    }
   }
   @media (max-width: 1024px){
     margin: 0 10px;
@@ -304,7 +316,7 @@ footer{
 @media (max-width: 640px) {
   .section{
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     line-height: 100vw;
     .section-inner{
       vertical-align: bottom;
