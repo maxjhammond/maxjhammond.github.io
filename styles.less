@@ -297,12 +297,23 @@ footer{
       .insp-gallery {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         img {
           width: 33%;
           display: inline-block;
-          padding: 0 0 5px;
+          padding: 0 2.5px 5px;
           box-sizing: border-box;
+          align-self: center;
+        }
+        @media (max-width: 1024px){
+          margin: 0 -2.5px;
+          img {
+            width: 50%;
+          }
+        }
+        &:after{
+          content: '';
+          clear: both;
         }
       }
     }
