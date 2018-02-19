@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c552f46-bc6a-4d76-959e-f185b0bb6c4f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HelveticaNeueLTStd-BlkEx.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HelveticaNeue_Medium.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Sunfall_LineUp.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/escapism3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/idri.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/jaar.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo/logo-small-red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo/logo-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/magi.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/manchester.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/nissan.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/offwhite.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/rudnick.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/rudnick2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/santafe.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/sanyo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/tsotl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/virtual.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/default.less" afterPath="$PROJECT_DIR$/default.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles.less" afterPath="$PROJECT_DIR$/styles.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,7 +79,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-1141" />
+    <option name="y" value="59" />
     <option name="width" value="1920" />
     <option name="height" value="1036" />
   </component>
@@ -182,15 +160,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519055409779</updated>
-      <workItem from="1519055410999" duration="6073000" />
+      <workItem from="1519055410999" duration="6164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6073000" />
+    <option name="totallyTimeSpent" value="6164000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1141" width="1920" height="1036" extended-state="6" />
+    <frame x="0" y="59" width="1920" height="1036" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15277778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
