@@ -15,7 +15,6 @@
 }
 
 html{
-  background: @lightgrey;
   min-height: 100vh;
 }
 
@@ -25,13 +24,63 @@ h1, p{
 
 body{
   margin: 0;
-  font-family: 'HelveticaNeueMed', sans-serif;
   font-size: 0.8em;
+  font-family: "Josefin", sans-serif;
+  overflow-x: hidden;
+}
+
+.menubtn{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 99;
+  i{
+    font-size: 50px;
+    color: @white;
+    cursor: pointer;
+  }
+}
+
+strong{
+  font-family: "Josefin Bold", sans-serif;
+}
+
+.italic{
+  font-family: "Josefin Italic", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Playfair", serif;
+  margin: 0 0 10px;
+  i{
+    font-family: "Playfair Italic", serif;
+  }
+}
+
+h1{
+  font-size: @xxlarge;
+}
+
+h2{
+  font-size: @xlarge;
+}
+
+h3{
+  font-size: @large;
+}
+
+h4{
+  font-size: @medium;
 }
 
 p, span, a{
-  font-family: 'HelveticaNeueMed', sans-serif;
   font-size: 1em;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 img{
@@ -57,135 +106,67 @@ a{
 header{
   text-align: center;
   padding: 20px 0;
-  font-family: 'HelveticaNeueLTDExt', sans-serif;
-  h1,img{
-    display: inline-block;
-    vertical-align: bottom;
-    color: @red;
+}
+
+.menu{
+  position: fixed;
+  width: 400px;
+  height: 100vh;
+  left: -400px;
+  top: 0;
+  transition: left ease 0.3s;
+  z-index: 99;
+  background: @offBlack;
+  .menu-items{
+    margin: 100px 20px;
+    border-top: 1px solid;
+    padding: 40px 0 0 0;
+    li{
+      margin: 0 0 10px;
+      padding: 0 0 5px;
+      a{
+        color: @white;
+        font-size: @large;
+        display: inline-block;
+        position: relative;
+        &::after{
+          position: absolute;
+          content: '';
+          width: 0px;
+          height: 2px;
+          background: @white;
+          display: inline-block;
+          transition: width 0.2s ease;
+          left: 0;
+          top: 20px;
+        }
+      }
+      &:hover{
+        a {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
-  img.logo{
-    margin-left: -7%;
-  }
-  @media (min-width: 640px) {
-    h1:first-child {
-      float: left;
-    }
-    h1:last-child {
-      float: right;
-    }
-  }
-  @media (max-width: 640px) {
-    padding: 10px;
-    h1{
-      text-align: left;
-      display: block;
-    }
-    img.logo{
-      position: absolute;
-      top: 10px;
-      right: 10px;
-    }
-    .container{
-      margin-left: 0;
-    }
+  &.active{
+    left: 0;
   }
 }
 
 footer{
   padding: 20px 0 0;
   margin: 100px 0 0;
-  .container{
-    border-top: 1px solid;
-  }
   .fsection{
     width: 50%;
     display: inline-block;
     text-align: center;
     box-sizing: border-box;
-    &.contact, &.social{
-      .icon-wrap {
-        .icons {
-          display: inline-block;
-          width: 50%;
-          margin: 0 auto;
-          a {
-            width: 50%;
-            display: inline-block;
-            position: relative;
-            i {
-              font-size: 3em;
-              cursor: pointer;
-              margin-left: 0;
-              transition: all ease 0.2s;
-              .icon-inner {
-                font-size: 16px;
-                position: absolute;
-                opacity: 0;
-                left: 0;
-                top: 33%;
-                transition: left ease 0.2s;
-                @media (max-width: 640px) {
-                  display: none;
-                }
-              }
-            }
-            &:hover{
-              i{
-                color: @red;
-                margin-left: -50%;
-                .icon-inner{
-                  opacity: 1;
-                  left: 40%;
-                }
-                &.fa.fa-envelope-o{
-                  margin-left: -140%;
-                  .icon-inner{
-                    left: 0%;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    &.social{
-      border-right: 1px solid;
-    }
-  }
-  @media (max-width: 640px){
-    margin: 100px 0 0;
-    background: @red;
-    .container{
-      border-top: 0;
-      .fsection{
-        width: 100%;
-        display: block;
-        border-right: 0;
-        h3, .icon-wrap{
-          width: 50%;
-          display: inline-block;
-          vertical-align: middle;
-          text-align: left;
-          .icons{
-            width: 100%;
-            text-align: right;
-            a{
-              i{
-                font-size: 2em;
-              }
-            }
-          }
-        }
-        &.contact{
-          border-top: 1px solid;
-        }
-      }
-    }
   }
   .logo-wrap{
     text-align: center;
-    padding: 10px 0;
+    padding: 30px 0 10px;
   }
 }
 
@@ -201,145 +182,44 @@ footer{
     display: inline-block;
     padding-bottom: 10px;
   }
-  .hero{
-    background-image: url('img/manchester.jpg');
-    background-color: red;
-    background-blend-mode: difference;
-    transition: background-color cubic-bezier(.5,0,.5,1) 1s;
-    &:hover{
-      background-color: transparent;
-      .hero-title{
-        opacity: 1;
-      }
-    }
-    height: 630px;
-    .hero-title{
-      color: @white;
-      text-align: center;
-      padding-top: 10%;
-      font-size: 3em;
-      opacity: 0;
-      transition: opacity cubic-bezier(.5,0,.5,1) 1s;
-    }
-  }
-  ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .projects{
-    text-align: right;
-    display: block;
-    li{
-      a {
-        position: relative;
-        padding: 0 20px 5px 0;
-        transition: all linear 0.2s;
-        cursor: pointer;
-        display: inline-block;
-        &::after {
-          position: absolute;
-          content: '';
-          width: 15px;
-          height: 2px;
-          background: @black;
-          top: 35%;
-          right: 0;
-          transition: all ease 0.2s;
-        }
-        &:hover, &.active {
-          padding: 0 0 5px;
-          color: @red;
-          &::after {
-            width: 100%;
-            top: 75%;
-            right: 0;
-            background: @red;
-          }
-        }
-        &.active{
-          color: @black;
-        }
-      }
-      .project{
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        padding: 0 0 0;
-        transition: opacity linear 0.4s;
-        &.active{
-          max-height: 1000px;
-          padding: 10px 0 20px;
-          opacity: 1;
-          transition: opacity linear 0.4s;
-        }
-        p{
-          margin-bottom: 5px;
-        }
-      }
-    }
-  }
-  .section{
-    margin: 10% 0;
-    h2{
-      margin: 0;
-      text-align: center;
-      display: block;
-      border-bottom: 0;
-      padding: 0;
-    }
-    p{
-      margin: 0 auto;
-      max-width: 50%;
-      &.center{
-        margin-bottom: 2px;
-      }
-    }
-    &.inspiration{
-      line-height: normal;
-      margin: 0;
-      .insp-gallery {
-        display: flex;
-        justify-content: space-between;
-        flex-flow: row wrap;
-        img {
-          width: 33%;
-          display: inline-block;
-          padding: 0 2.5px 5px;
-          box-sizing: border-box;
-          align-self: center;
-        }
-        @media (max-width: 1024px){
-          margin: 0 -2.5px;
-          img {
-            width: 50%;
-          }
-        }
-        &:after{
-          content: '';
-          clear: both;
-        }
-      }
-    }
-  }
   @media (max-width: 1024px){
     margin: 0 10px;
   }
+  &.heroInner{
+    color: @white;
+    position: absolute;
+    z-index: 3;
+    text-align: right;
+    top: 40vh;
+    right: 25vw;
+  }
+  &.big{
+    height: 2000px;
+  }
 }
 
-//FULL VH ON MOBILE SECTIONS
+.hero{
+  background: url("img/Scott 1.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  overflow-x: hidden;
+  .overlay{
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 100%);
+    //background: rgba(0,0,0,0.5);
+  }
+}
+
+//MOBILE STYLES
 @media (max-width: 640px) {
-  .section{
-    margin: 0;
-    min-height: 100vh;
-    line-height: 100vw;
-    .section-inner{
-      vertical-align: bottom;
-      line-height: normal;
-      display: inline-block;
-    }
-  }
-  .hero{
-    height: 80vh!important;
-  }
+
 }
