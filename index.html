@@ -19,6 +19,26 @@
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   </head>
   <body>
+  <aside class="nav">
+    <ul class="nav-links">
+      <li class="nav-link">
+        <a href="#ethos">Ethos</a>
+      </li>
+      <li class="nav-link">
+        <a href="#technology">Technology</a>
+      </li>
+      <li class="nav-link">
+        <a href="#inspiration">Inspiration</a>
+      </li>
+      <li class="nav-link">
+        <a href="#projects">Projects</a>
+      </li>
+      <li class="nav-link">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+    <div class="nav-btn">🡢</div>
+  </aside>
     <header>
       <div class="container">
         <h1>Web Design</h1>
@@ -34,6 +54,7 @@
           </h1>
         </div>
       </div>
+      <a name="ethos"></a>
       <h2>
         Ethos
       </h2>
@@ -47,6 +68,7 @@
           <p>My work is design-first, drawing inspiration from iconic graphic pieces such as album covers, magazines and advertisements.</p>
         </div>
       </div>
+      <a name="technology"></a>
       <h2>Technology</h2>
       <div class="section technology">
         <div class="section-inner">
@@ -55,6 +77,7 @@
           <p>With the above I can create just about anything on a web page. For more dynamic content, we can introduce libraries like jQuery and Angular. For projects like blogs and online stores, we can introduce back-ends such as Wordpress, Magento and Shopify.</p>
         </div>
       </div>
+      <a name="inspiration"></a>
       <h2>Inspiration</h2>
       <div class="section inspiration">
         <div class="insp-gallery">
@@ -73,6 +96,7 @@
           <img class="wow fadeIn" src="img/idri.jpg">
         </div>
       </div>
+      <a name="projects"></a>
       <h2 class="projects">
         Projects
       </h2>
@@ -114,6 +138,7 @@
 
       </ul>
     </div>
+  <a name="contact"></a>
   <footer>
     <div class="container">
       <div class="fsection social">
@@ -180,6 +205,10 @@
             $(this).addClass('active');
         }
 
+    });
+
+    $('.nav-btn').on('click', function(){
+        $('.nav').toggleClass('active');
     });
   </script>
   </body>
