@@ -182,7 +182,14 @@ header{
       right: 10px;
     }
     .container{
-      margin-left: 0;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 10px 10px 5px 10px;
+      width: 95.1%;
+      background: @white;
+      z-index: 1000;
     }
   }
 }
@@ -297,9 +304,11 @@ footer{
     display: inline-block;
     padding-bottom: 10px;
   }
-  .hero{
+  .section .hero{
     background-image: url('img/manchester.jpg');
     background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-blend-mode: difference;
     transition: background-color cubic-bezier(.5,0,.5,1) 1s;
     &:hover{
@@ -308,7 +317,7 @@ footer{
         opacity: 1;
       }
     }
-    height: 100%;
+    height: 60vh;
     .hero-title{
       color: @white;
       text-align: center;
@@ -418,6 +427,7 @@ footer{
       }
     }
     &.hero{
+      min-height: 60vh;
       @media (min-width: 1024px) {
         margin: 0 0 17.5% 0;
       }
@@ -444,5 +454,6 @@ footer{
     height: 82.3vh!important;
     min-height: 80vh!important;
     line-height: unset !important;
+    margin-top: 120px;
   }
 }
