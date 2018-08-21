@@ -339,7 +339,8 @@ footer{
     li{
       a {
         position: relative;
-        padding: 0 20px 5px 0;
+        padding: 0 0 5px;
+        margin-right: 20px;
         transition: all linear 0.2s;
         cursor: pointer;
         display: inline-block;
@@ -350,11 +351,10 @@ footer{
           height: 2px;
           background: @black;
           top: 35%;
-          right: 0;
+          right: -20px;
           transition: all ease 0.2s;
         }
         &:hover, &.active {
-          padding: 0 0 5px;
           color: @red;
           &::after {
             width: 100%;
@@ -448,9 +448,11 @@ footer{
     min-height: 100vh;
     line-height: 100vw;
     .section-inner{
-      vertical-align: bottom;
       line-height: normal;
       display: inline-block;
+      &:first-of-type{
+        margin-top: 10vh;
+      }
     }
   }
   .section.hero{
