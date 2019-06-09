@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Max Hammond Web Design</title>
+    <title>MH Web</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#FF0000">
+    <meta name="theme-color" content="#3f3f3f">
     <link rel="stylesheet/less" href="styles.less">
     <link rel="stylesheet/less" href="animate.css">
     <link rel="shortcut icon" type="image/png" href="/img/logo/favicon.png"/>
@@ -44,10 +44,64 @@
       </div>
     </header>
     <div class="container">
+      <div class="center">
+        <h2 class="strobe toggle-pic">
+          Hi, I'm Max!
+        </h2>
+      </div>
+      <div class="center">
+        <div class="max">
+          <img alt="Me!" src="/img/max.jpg">
+        </div>
+      </div>
+        <a name="services"></a>
+        <h2>
+          Services
+        </h2>
+        <div class="section ethos">
+          <div class="section-inner">
+            <h2>
+              Static, WordPress or CMS
+            </h2>
+            <p class="center"><i>Just a few of the services I offer, get in touch if you have something else in mind!</i></p>
+            <p>I am currently looking to work on small to medium sized projects consisting of the above types of website, although I am not limited to these.</p>
+            <p>
+              CMS (Content Management System) can range from things such as WooCommerce for WordPress, Magento or Shopify.
+            </p>
+            <br>
+            <br>
+          </div>
+          <div class="section-inner">
+            <h2>
+              Design and UX
+            </h2>
+            <p class="center"><i>Outside of coding, I also provide designs and consultations for anything web.</i></p>
+            <p>
+                Do you need a design for your idea? Maybe you already have a website and it needs a new look. I also offer design and consultation work to help get your vision off the ground.
+            </p>
+            <br>
+            <br>
+          </div>
+          <div class="section-inner strobe">
+            <h2>
+              SEO and PWA
+            </h2>
+            <p class="center"><i>The way we use the web is changing, I can help ensure your site is future-proof.</i></p>
+            <p>
+              A huge part of making a successful website is making it easy to find and easy to use, by everyone. I can help you get your site on Google search results and set up with tracking tools like Google Analytics.
+            </p>
+            <p>
+              Want to take your site offline? Turn it into a PWA! Making a site into a PWA (Progressive Web App) allows users to install it to their mobile device and use offline, just like a regular app.
+            </p>
+            <br>
+            <br>
+            <p class="center"><b>Feel free to get in touch for a quote today!</b></p>
+          </div>
+        </div>
       <h2 class="projects">
         Projects
       </h2>
-      <ul class="projects strobe">
+      <ul class="projects">
 
         <li>
           <a>
@@ -78,50 +132,7 @@
         </li>
 
       </ul>
-      <a name="services"></a>
-      <h2>
-        Services
-      </h2>
-      <div class="section ethos">
-        <div class="section-inner strobe">
-          <h2>
-            Static, WordPress or CMS
-          </h2>
-          <p class="center"><i>Just a few of the services I offer, get in touch if you have something else in mind!</i></p>
-          <p>I am currently looking to work on small to medium sized projects consisting of the above types of website, although I am not limited to these.</p>
-          <p>
-            CMS (Content Management System) can range from things such as WooCommerce for WordPress, Magento or Shopify.
-          </p>
-          <br>
-          <br>
-        </div>
-        <div class="section-inner strobe">
-          <h2>
-            Design and UX
-          </h2>
-          <p class="center"><i>Outside of coding, I also provide designs and consultations for anything web.</i></p>
-          <p>
-              Do you need a design for your idea? Maybe you already have a website and it needs a new look. I also offer design and consultation work to help get your vision off the ground.
-          </p>
-          <br>
-          <br>
-        </div>
-        <div class="section-inner strobe">
-          <h2>
-            SEO and PWA
-          </h2>
-          <p class="center"><i>The way we use the web is changing, I can help ensure your site is future-proof.</i></p>
-          <p>
-            A huge part of making a successful website is making it easy to find and easy to use, by everyone. I can help you get your site on Google search results and set up with tracking tools like Google Analytics.
-          </p>
-          <p>
-            Want to take your site offline? Turn it into a PWA! Making a site into a PWA (Progressive Web App) allows users to install it to their mobile device and use offline, just like a regular app.
-          </p>
-          <br>
-          <br>
-          <p class="center"><b>Feel free to get in touch for a quote today!</b></p>
-        </div>
-      </div>
+      
     </div>
   <a name="contact"></a>
   <footer>
@@ -170,12 +181,6 @@
   </footer>
   <script>
 
-    var $grid = $('.insp-gallery').imagesLoaded( function() {
-        $grid.masonry();
-    });
-
-    new WOW().init();
-
     var selector = '.projects li a';
 
     $(selector).on('click', function(){
@@ -194,6 +199,10 @@
 
     $('.nav-btn').on('click', function(){
         $('.nav').toggleClass('active');
+    });
+
+    $('.toggle-pic').on('click', function(){
+      $('.max').toggleClass('active');
     });
   </script>
   </body>

@@ -19,10 +19,37 @@ html{
   background-size: cover;
   color: @white;
   min-height: 100vh;
+  scroll-behavior: smooth;
+  @media (max-width: 640px) {
+    background-position: center center;    
+  }
 }
 
 h1, p{
   margin: 0;
+}
+
+h2{
+  &.toggle-pic{
+    margin-bottom: 0;
+    width: 106px;
+  }
+}
+
+.center{
+  text-align: center;
+}
+
+.max{
+  margin: 0 auto;
+  display: inline-block;
+    height: 0px;
+    width: 106px;
+    transition: height ease 150ms;
+    overflow-y: hidden;
+    &.active{
+      height: 106px;
+    }
 }
 
 body{
@@ -39,6 +66,7 @@ p, span, a{
 
 img{
   width: 100%;
+  display: block;
 }
 
 img.logo{
@@ -217,6 +245,10 @@ footer{
             width: 50%;
             display: inline-block;
             position: relative;
+            &.strobe:after{
+              right: unset;
+              left: -5px;
+            }
             i {
               font-size: 3em;
               cursor: pointer;
@@ -291,6 +323,9 @@ footer{
   .logo-wrap{
     text-align: center;
     padding: 30px 0 10px;
+    .logo{
+      margin: 0 auto;
+    }
   }
 }
 
@@ -469,23 +504,29 @@ footer{
 
 
 .strobe{
+  cursor: pointer;
   position: relative;
   &:after{
     position: absolute;
+    border: 1px solid @red;
     right: -5px;
     top: -5px;
     width: 5px;
     height: 5px;
     border-radius: 5px;
     content: '';
-    display: none;
-    animation:strobe 80ms steps(1,end) infinite;
-    box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.5);
+    display: block;
     transition: all linear 50ms;
   }
   &:hover{
     &:after{
-      display: block;
+      animation:strobe 80ms steps(1,end) infinite;
+      box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.5);
+    }
+  }
+  &.toggle-pic{
+    &:after{
+      right: -10px;
     }
   }
 }
@@ -495,8 +536,8 @@ footer{
     display: block;
     top: unset;
     right: unset;
-    bottom: -5px;
-    left: -5px;
+    bottom: -30px;
+    left: -2px;
     @media (max-width: 640px) {
       bottom: -25px;
       left: 10px; 
