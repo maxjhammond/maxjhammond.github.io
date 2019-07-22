@@ -17,7 +17,21 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
+<aside class="nav">
+    <a title="Contact Max" href="tel:+4467876399" class="nav-item max">
+
+    </a>
+    <a title="Download Max's CV" href="#" class="nav-item download" target="_blank" rel="noreferrer">
+        <i class="fa fa-floppy-o" aria-hidden="true"></i>
+    </a>
+    <div title="Page 1" class="nav-item page-1">
+        <i>1</i>
+    </div>
+    <div title="Page 2" class="nav-item page-2">
+        <i>2</i>
+    </div>
+</aside>
+<div class="container first">
     <header class="clearfix">
         <div class="left">
             <h2>Web Developer</h2>
@@ -41,13 +55,33 @@
             <i>Introduction</i>
         </div>
         <div class="right">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis dapibus erat, a iaculis neque porta a. Donec sed tristique libero. Nunc sollicitudin, metus sit amet bibendum dictum, ante lacus bibendum est, nec pulvinar nibh odio sit amet lacus. Aenean felis tortor, bibendum nec pharetra in, ultrices quis tellus. In ultricies turpis urna, sit amet eleifend ex varius et. Aenean convallis euismod nisl eget venenatis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis dapibus erat, a iaculis neque
+            porta a. Donec sed tristique libero. Nunc sollicitudin, metus sit amet bibendum dictum, ante lacus bibendum
+            est, nec pulvinar nibh odio sit amet lacus. Aenean felis tortor, bibendum nec pharetra in, ultrices quis
+            tellus. In ultricies turpis urna, sit amet eleifend ex varius et. Aenean convallis euismod nisl eget
+            venenatis.
         </div>
     </div>
+</div>
+<div class="container second">
+
 </div>
 <script>
 
     //js here
+
+    $(document).ready(function () {
+        $('.page-1').on('click', function () {
+            $('html,body').animate({
+                scrollTop: $('.first').offset().top - 40
+            }, 300);
+        });
+        $('.page-2').on('click', function () {
+            $('html,body').animate({
+                scrollTop: $('.second').offset().top - 40
+            }, 300);
+        });
+    });
 
 </script>
 </body>
