@@ -71,15 +71,67 @@
     //js here
 
     $(document).ready(function () {
-        $('.page-1').on('click', function () {
+
+        function scrollUp() {
             $('html,body').animate({
                 scrollTop: $('.first').offset().top - 40
             }, 300);
-        });
-        $('.page-2').on('click', function () {
+        }
+
+        function scrollDown() {
             $('html,body').animate({
                 scrollTop: $('.second').offset().top - 40
             }, 300);
+        }
+
+        $('.page-1').on('click', function () {
+            scrollUp()
+        });
+
+
+        $('.page-2').on('click', function () {
+            scrollDown();
+        });
+
+
+        $(document).keydown(function (e) {
+            switch (e.which) {
+                case 37:
+                    $('.page-1').trigger('click');
+                    $('.page-1').addClass('active');
+                    setTimeout(function(){
+                        $('.page-1').removeClass('active');
+                    }, 100);
+                    break;
+
+                case 38:
+                    $('.page-1').trigger('click');
+                    $('.page-1').addClass('active');
+                    setTimeout(function(){
+                        $('.page-1').removeClass('active');
+                    }, 100);
+                    break;
+
+                case 39:
+                    $('.page-2').trigger('click');
+                    $('.page-2').addClass('active');
+                    setTimeout(function(){
+                        $('.page-2').removeClass('active');
+                    }, 100);
+                    break;
+
+                case 40:
+                    $('.page-2').trigger('click');
+                    $('.page-2').addClass('active');
+                    setTimeout(function(){
+                        $('.page-2').removeClass('active');
+                    }, 100);
+                    break;
+
+                default:
+                    return;
+            }
+            e.preventDefault();
         });
     });
 

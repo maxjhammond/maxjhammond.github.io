@@ -118,27 +118,31 @@ a {
   z-index  : 10;
 
   .nav-item {
-    width         : 50px;
-    height        : 50px;
-    line-height   : 50px;
-    border-radius : 50%;
-    background    : @ocean;
-    margin        : 0 0 20px;
-    box-shadow    : 0 2px 6px 3px rgba(0, 0, 0, 0.16);
-    cursor        : pointer;
-    transition    : all ease 0.2s;
-    position      : relative;
-    bottom        : 0;
-    font-size     : 20px;
-    color         : @white;
-    text-align    : center;
-    display       : block;
+    width               : 50px;
+    height              : 50px;
+    line-height         : 50px;
+    border-radius       : 50%;
+    background          : @ocean;
+    margin              : 0 0 20px;
+    box-shadow          : 0 2px 6px 3px rgba(0, 0, 0, 0.16);
+    cursor              : pointer;
+    transition          : all ease 0.2s;
+    position            : relative;
+    bottom              : 0;
+    font-size           : 20px;
+    color               : @white;
+    text-align          : center;
+    display             : block;
+    -moz-user-select    : none;
+    -webkit-user-select : none;
+    -ms-user-select     : none;
+    user-select         : none;
 
     &:hover {
       transform : scale(1.05);
     }
 
-    &:focus, &:active {
+    &:focus, &:active, &.active {
       bottom : -2px
     }
 
